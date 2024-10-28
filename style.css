@@ -6,14 +6,22 @@
 :root{
     --bg-color: hsla(0, 1%, 85%, 0.87);
     --text-color: black;
-    --navbar-bg-color: #333;
-    --navbar-text-color: white;
-    --navbar-link-color: white;
-    --navbar-link-hover-color: #555;
+    --accent-color: hsl(207, 70%, 53%);
+    --primary-color: hsl(0, 1%, 36%);
+    --secondary-color: hsl(239, 84%, 22%);
+}
+
+.darkMode{
+    --bg-color: hsl(0, 0%, 13%);
+    --text-color: white;
+    --accent-color: hsl(239, 84%, 22%);
+    --primary-color: hsl(0, 0%, 51%);
+    --secondary-color: hsl(0, 0%, 76%);
 }
 
 body{
     background-color: var(--bg-color);
+    color: var(--text-color);
 }
 
 header h1{
@@ -31,5 +39,28 @@ header{
 .navbar {
     position: sticky;
     top: 0;
-    background-color: var(--navbar-bg-color);
+    background-color: var(--primary-color);
+    color: var(--text-color);
+}
+
+main h2{
+    text-align: center;
+}
+
+#passions{
+    background-color: var(--primary-color);
+    border-radius: 10px;
+    padding: 10px;
+    color: var(--text-color);
+}
+
+#projects{
+    background-color: var(--primary-color);
+    border-radius: 10px;
+    padding: 10px;
+    color: var(--text-color);
+}
+
+ul, ol{
+    list-style: none;
 }

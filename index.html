@@ -5,65 +5,92 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portifólio</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
+    <nav class="navbar">
+        <div class="container-fluid" id="navContainer">
+            <a class="navItem navbar-brand" href="#home">Início</a>
+            <a class="navItem navbar-brand"" href=" #about">Quem Sou Eu?</a>
+            <a class="navItem navbar-brand"" href=" #contact">Contato</a>
+        </div>
+    </nav>
+
     <!--Evite colocar a navbar dentro do header, por algum motivo não funciona com Sticky-->
     <header>
         <div class="container-fluid" id="nameContainer">
-            <h1>Rafael Sabatini</h1>
+            <h1>Rafael Sabatini Romera</h1>
             <p>Desenvolvedor Full-Stack</p>
             <img src="" alt="imagemRafael" class="img-fluid">
-        </div> 
+        </div>
     </header>
 
-    <nav class="navbar mt-2">
-        <div class="container-fluid" id="navContainer">
-            <a class="navItem navbar-brand" href="#home">Início</a>
-            <a class="navItem navbar-brand"" href="#about">Quem Sou Eu?</a>
-            <a class="navItem navbar-brand"" href="#contact">Contato</a>
-        </div>
-    </nav>
+    <hr>
 
     <main>
         <div id="home" class="container-fluid my-3">
             <h2>Início</h2>
+            <span class="text-start">
+                Meu nome é Rafael, tenho 20 anos de idade e sou estudate de Engenharia da Computação na UNiRP e
+                eu sonho com a possibilidade de unir a humanidade e tecnologia, criando uma sociedade melhor utilizando
+                recursos de Inteligencia Artificial e
+                princípios da psicologia, de uma forma que humanos e máquinas convivam em harmonia.
+                <br>
+                A seguir segue algumas informações sobre eu.
+            </span>
+            <div class="row align-items-center justify-content-center">
+                <h3>Interesses</h3>
 
-            <h3>Interesses</h3>
+                <div class="col-12 text-center mb-4" id="passionContainer">
+                    <aside id="passions">
+                        <div class="passionList">
+                            <p>Inteligencia Artificial</p>
+                            <p>Desenvolvimento Web</p>
+                            <p>APIs com C# MVC e Java Spring Boot</p>
+                            <p>Psicologia</p>
+                        </div>
+                    </aside>
+                </div>
 
-            <aside id="passions">
-                <ol class="passionList">
-                    <li>Inteligencia Artificial</li>
-                    <li>Desenvolvimento Web</li>
-                    <li>APIs com C# MVC e Java Spring Boot</li>
-                </ol>
-            </aside>
+                <h3>Projetos</h3>
 
-            <h2>Projetos</h2>
-            <article class="projects">
-                <h6>Conversor de Textos</h6>
-                <a href="https://aetheriv.github.io/Converte-Textos/">Converte Textos</a>
-
-                <h6>API Com Spring Boot</h6>
-                <a href="https://github.com/AetherIV/api-spring-boot">API Spring Boot</a>
-
-                <h6>Pokedex com imagens</h6>
-                <a href="https://aetheriv.github.io/pokedex/">Pokedex</a>
-            </article>
+                <div class="col-12 text-center">
+                    <article id="projects">
+                        <h6>Conversor de Textos</h6>
+                        <a href="https://aetheriv.github.io/Converte-Textos/">Converte Textos</a>
+                        <br>
+                        <h6>API Com Spring Boot</h6>
+                        <a href="https://github.com/AetherIV/api-spring-boot">API Spring Boot</a>
+                        <br>
+                        <h6>Pokedex com imagens</h6>
+                        <a href="https://aetheriv.github.io/pokedex/">Pokedex</a>
+                    </article>
+                </div>
+            </div>
         </div>
 
         <div id="about" class="container-fluid my-3">
             <h2>Quem Sou Eu?</h2>
-            <span>
-                Meu nome é Rafael, tenho 20 anos de idade e sou estudate de Engenharia da Computação na UNiRP.
-                <br>
-                Eu sonho com a possibilidade de unir a humanidade e tecnologia, criando uma sociedade melhor utilizando recursos de Inteligencia Artificial e 
-                princípios da psicologia, de uma forma que humanos e máquinas convivam em harmonia.
-            </span>
-
+            <div class="text-center mx-5">
+                <article>
+                    Bom, resumidamente eu sou um cara apaixonado por tecnologia, porém eu tenho um pouco mais de afinidade com a parte teórica e filosófica da tecnonologia.
+                    Por exemplo, o meu objetivo de vida é criar algum tipo de ferramenta para conseguir melhorar a vida do ser humano, utilizando Inteligência Artificial e
+                    princípios da psicologia, e isso é bem complexo, mas eu gosto de desafios.
+                    <br>
+                    <br>
+                    Acredito que com mais estudo eu consigo chegar à um ponto onde consigo tornar isso possível, mas por enquanto eu tenho outras prioridades
+                    como minha outra paixão, que é a programação Full-Stack, mais voltada à Web e APIs, onde crio pequenas aplicações web como veremos abaixo.
+                    <br>
+                    <br>
+                    Enfim, desde pequeno eu sempre gostei de computadores, e me encontrei tendo muita facilidade para realizar coisas mais complexas, tipo baixar algum
+                    jogo ou então entender como funiona certa parte de um computador, então quando terminei a escola, decidi que iria cursar a Engenharia da Computação,
+                    pois além da parte teórica, eu também gostava de desomntar e montar coisas, e compreender circuiros elétricos.
+                </article>
+            </div>
             <h2>Hard Skills</h2>
 
             <ul>
@@ -93,7 +120,9 @@
         <p>Rafael Sabatini</p>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
     <script src="script.js"></script>
 </body>
 
