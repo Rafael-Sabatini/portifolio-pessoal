@@ -29,95 +29,102 @@
         </div>
     </header>
 
-    <hr>
-
     <main>
-        <div id="home" class="container-fluid my-3">
+        <div id="home">
             <h2>Início</h2>
-            <span class="text-start">
+            <div class="text-start" id="startText">
                 Meu nome é Rafael, tenho 20 anos de idade e sou estudate de Engenharia da Computação na UNiRP e
                 eu sonho com a possibilidade de unir a humanidade e tecnologia, criando uma sociedade melhor utilizando
                 recursos de Inteligencia Artificial e
                 princípios da psicologia, de uma forma que humanos e máquinas convivam em harmonia.
                 <br>
                 A seguir segue algumas informações sobre eu.
-            </span>
+            </div>
             <div class="row align-items-center justify-content-center">
+
                 <h3>Interesses</h3>
 
-                <div class="col-12 text-center mb-4" id="passionContainer">
+                <div class="col-12 text-center my-4 mx-4 display-6" id="passionContainer">
                     <aside id="passions">
-                        <div class="passionList">
-                            <p>Inteligencia Artificial</p>
+                            <p>Inteligência Artificial</p>
                             <p>Desenvolvimento Web</p>
                             <p>APIs com C# MVC e Java Spring Boot</p>
                             <p>Psicologia</p>
-                        </div>
                     </aside>
                 </div>
 
                 <h3>Projetos</h3>
 
-                <div class="col-12 text-center">
+                <div class="col-7 text-center my-4 mx-4 display-6" id="projectContainer">
                     <article id="projects">
-                        <h6>Conversor de Textos</h6>
+                        <p>Conversor de Textos</p>
                         <a href="https://aetheriv.github.io/Converte-Textos/">Converte Textos</a>
-                        <br>
-                        <h6>API Com Spring Boot</h6>
+                        <p>API Com Spring Boot</p>
                         <a href="https://github.com/AetherIV/api-spring-boot">API Spring Boot</a>
-                        <br>
-                        <h6>Pokedex com imagens</h6>
+                        <p>Pokedex com imagens</p>
                         <a href="https://aetheriv.github.io/pokedex/">Pokedex</a>
                     </article>
                 </div>
+
             </div>
         </div>
 
-        <div id="about" class="container-fluid my-3">
-            <h2>Quem Sou Eu?</h2>
-            <div class="text-center mx-5">
+        <div class="container-fluid my-3">
+            <h2 id="about">Quem Sou Eu?</h2>
+            <div class="text-center mx-5" id="selfDesc">
                 <article>
-                    Bom, resumidamente eu sou um cara apaixonado por tecnologia, porém eu tenho um pouco mais de afinidade com a parte teórica e filosófica da tecnonologia.
-                    Por exemplo, o meu objetivo de vida é criar algum tipo de ferramenta para conseguir melhorar a vida do ser humano, utilizando Inteligência Artificial e
+                    Bom, resumidamente eu sou um cara apaixonado por tecnologia, porém eu tenho um pouco mais de
+                    afinidade com a parte teórica e filosófica da tecnonologia.
+                    Por exemplo, o meu objetivo de vida é criar algum tipo de ferramenta para conseguir melhorar a vida
+                    do ser humano, utilizando Inteligência Artificial e
                     princípios da psicologia, e isso é bem complexo, mas eu gosto de desafios.
                     <br>
                     <br>
-                    Acredito que com mais estudo eu consigo chegar à um ponto onde consigo tornar isso possível, mas por enquanto eu tenho outras prioridades
-                    como minha outra paixão, que é a programação Full-Stack, mais voltada à Web e APIs, onde crio pequenas aplicações web como veremos abaixo.
+                    Acredito que com mais estudo eu consigo chegar à um ponto onde consigo tornar isso possível, mas por
+                    enquanto eu tenho outras prioridades
+                    como minha outra paixão, que é a programação Full-Stack, mais voltada à Web e APIs, onde crio
+                    pequenas aplicações web como veremos abaixo.
                     <br>
                     <br>
-                    Enfim, desde pequeno eu sempre gostei de computadores, e me encontrei tendo muita facilidade para realizar coisas mais complexas, tipo baixar algum
-                    jogo ou então entender como funiona certa parte de um computador, então quando terminei a escola, decidi que iria cursar a Engenharia da Computação,
-                    pois além da parte teórica, eu também gostava de desomntar e montar coisas, e compreender circuiros elétricos.
+                    Enfim, desde pequeno eu sempre gostei de computadores, e me encontrei tendo muita facilidade para
+                    realizar coisas mais complexas, tipo baixar algum
+                    jogo ou então entender como funiona certa parte de um computador, então quando terminei a escola,
+                    decidi que iria cursar a Engenharia da Computação,
+                    pois além da parte teórica, eu também gostava de desomntar e montar coisas, e compreender circuiros
+                    elétricos.
                 </article>
             </div>
-            <h2>Hard Skills</h2>
 
-            <ul>
-                <li>Java POO e APIs</li>
-                <progress value="30" max="100"></progress>
-                <li>C# MVC e Razor</li>
-                <progress value="40" max="100"></progress>
-                <li>Desenvolvimento Web com HTML, CSS e JavaScript</li>
-                <progress value="60" max="100"></progress>
-                <li>Arduino com C++</li>
-                <progress value="20" max="100"></progress>
-            </ul>
+            <h2>Hard Skills</h2>
+            <div class="container-md justify-content-center align-items-center display-6" id="hardSkills">
+                <ul>
+                    <li>Java POO e APIs</li>
+                    <progress value="30" max="100"></progress>
+                    <li>C# MVC e Razor</li>
+                    <progress value="40" max="100"></progress>
+                    <li>Desenvolvimento Web com HTML, CSS e JavaScript</li>
+                    <progress value="60" max="100"></progress>
+                    <li>Arduino com C++</li>
+                    <progress value="20" max="100"></progress>
+                </ul>
+            </div>
 
             <h2>Soft Skills</h2>
 
-            <ul>
-                <li>Empatia</li>
-                <li>Atenção à detalhe</li>
-                <li>Comunicação Ativa</li>
-            </ul>
+            <div class="container-lg display-4 my-5" id="softSkills">
+                <ul>
+                    <li>Empatia</li>
+                    <li>Atenção à detalhe</li>
+                    <li>Comunicação Ativa</li>
+                </ul>
+            </div>
         </div>
     </main>
 
-    <footer id="contact" class="container-fluid my-3">
+    <footer id="contact" class="container-fluid">
         <p>Telefone (WhatsApp): (17) 99674-0020</p>
         <p>Email: rafaelsabatiniromera@gmail.com</p>
-        <p>Rafael Sabatini</p>
+        <a href="https://www.linkedin.com/in/rafael-sabatini-8a6859313">LinkedIn</a>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
