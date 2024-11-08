@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
   <meta charset="UTF-8" />
@@ -11,10 +11,10 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 
-<body>
+<body id="home" class="darkMode">
 
-  <div class="row">
-    <nav class="navbar navbar-expand-lg mx-2" id="navbar">
+  <div class="row" id="navbar">
+    <nav class="navbar navbar-expand-lg mx-2">
       <div class="container-fluid">
         <a class="navbar-brand" aria-disabled="true" id="navBrand">Portfólio</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -26,21 +26,23 @@
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="#home" id="homeItem">Início</a>
             </li>
-  
             <li class="nav-item">
               <a class="nav-link" href="#about" id="aboutItem">Quem sou Eu?</a>
             </li>
-  
             <li class="nav-item">
               <a class="nav-link" href="#projects" id="projectsItem">Projetos</a>
             </li>
-  
+            <li class="nav-item">
+              <a class="nav-link" href="#skills" id="skillItem">Habilidades</a>
+            </li>
             <li class="nav-item">
               <a class="nav-link" href="#contact" id="contactItem">Contato</a>
             </li>
-  
             <li>
-              <!--TODO: Modal para contato-->
+              <button class="btn" id="darkSwitch">
+                <i class="bi bi-moon"></i>
+                <i class="bi bi-sun"></i>
+              </button>
             </li>
           </ul>
         </div>
@@ -49,20 +51,51 @@
   </div>
 
   <main class="row">
-
-
     <div class="container-fluid my-2 mx-2 text-center col-12" id="about">
       <img src="/img/Me.jpg" class="img-fluid rounded-circle" style="height: 300px; width: 300px;">
       <h2>Rafael Sabatini Romera</h2>
-      <aside class="container-fluid my-3" id="aboutContainer">
+      <p style="font-weight: lighter;">Desenvolvedor Full-Stack</p>
+      <aside class="container my-3" id="aboutContainer">
         <h1>Quem sou Eu?</h1>
         <p>
-          <strong>Eu sou Rafael, estudante de Engenharia da Computação na UNiRP.</strong><br>
-          Meu objetivo é aprimorar meus conhecimentos em programação, focando em desenvolver soluções para problemas reais. Tenho uma paixão por desafios e adoro trabalhar em equipe. <br>
-          Minha história começa com uma idéia simples: resolver problemas complexos usando as ferramentas disponíveis. Desde então, me dedico à aprendizagem e ao desenvolvimento das minhas habilidades,
-          e a cada novo desafio, me sinto mais confiante e motivado. <br>
-          Entre minhas habilidades, as que tenho mais afinidade estão listadas abaixo.
+          <strong>Eu sou Rafael, estudante de Engenharia da Computação na UNiRP.</strong>
+
+          <br><br>
+
+          Meu objetivo é aprimorar meus conhecimentos em programação, utilizando problemas reais como uma motivação para um projeto,
+          para ter um conhecimento melhor e talvez até mudar o mundo.
+          <br><br>
+          Minha história começa com uma idéia simples: resolver problemas complexos usando algumas ferramentas, como IA, APIs, Arduíno, etc.
+          Desde então, me dedico à aprendizagem e ao desenvolvimento das minhas habilidades, procurando sempre um novo desafio
         </p>
+        <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#contactModal" id="modalBtn">
+          Entre em Contato!
+        </button>
+        <div class="modal fade" id="contactModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+          aria-labelledby="contactModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="contactModalLabel">Deixe suas informações</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body text-start">
+                <div>
+                  <label for="contactEmail">E-mail</label>
+                  <input type="email" id="contactEmail" class="form-control" placeholder="endereço@provedor.com">
+                </div>
+                <div class="my-2">
+                  <label for="contactPhone">Telefone</label>
+                  <input type="tel" id="contactPhone" class="form-control" placeholder="(12) 34567-8901">
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Fechar</button>
+                <button type="button" class="btn btn-outline-primary">Enviar</button>
+              </div>
+            </div>
+          </div>
+        </div>
       </aside>
     </div>
 
@@ -71,19 +104,101 @@
       <hr>
       <article>
         <div class="row">
-          <div class="col-3">
-            <h6>Conversor de Textos</h6>
-            <p>Um projeto feito para auxiliar o Suporte Técnico da Soften Sistemas em algumas tarefas, como remoção de símbolos e quebra de linhas</p>
-            <img src="/img/conversorTexto.jpg" class="img-thumbnail rounded-bottom">
+          <div class="col-4">
+            <a href="https://aetheriv.github.io/Converte-Textos/">Conversor de Textos</a>
+            <p>
+              Um projeto feito para auxiliar o Suporte Técnico da Soften Sistemas em algumas tarefas, como remoção de
+              símbolos e quebra de linhas
+            </p>
+            <img src="/img/conversorTexto.jpg" alt="conversorTexto" class="img-fluid rounded">
+          </div>
+          <div class="col-4">
+            <a href="https://aetheriv.github.io/Chamado-Express-V3/">Chamado Express</a>
+            <p>
+              Esse projeto foi desenvolvido para auxilia os técnicos da Soften Sistemas a preencher chamados, organizando as informações
+              de uma maneira fácil
+            </p>
+            <img src="/img/chamadoExpress.jpg" alt="chamadoExpress" class="img-fluid rounded">
+          </div>
+          <div class="col-4">
+            <a href="https://aetheriv.github.io/pokedex/">Pokedex com Imagens</a>
+            <p>
+              Esse foi um projeto pessoal e para estudos de API, é uma pokedex que consulta um pokemon e apresenta uma imagem ao consultar
+            </p>
+            <img src="/img/pokedex.jpg" alt="pokedex" class="img-fluid rounded">
           </div>
         </div>
-        
       </article>
+
+      <div class="row" id="skills">
+        <h1>Habilidades</h1>
+        <div class="col-12 row text-center" id="hardSkills">
+          <hr>
+          <div class="col-3" id="languagesContainer">
+            <h2>Linguagens</h2>
+              <p>JavaScript</p>
+              <progress max="100" value="60" id="jsProgress"></progress>
+              <p>HTML</p>
+              <progress max="100" value="70" id="htmlProgress"></progress>
+              <p>CSS</p>
+              <progress max="100" value="50" id="cssProgress"></progress>
+              <p>C#</p>
+              <progress max="100" value="40" id="cshProgress"></progress>
+              <p>C</p>
+              <progress max="100" value="30" id="cProgress"></progress>
+              <p>Java</p>
+              <progress max="100" value="50" id="javaProgress"></progress>
+          </div>
+
+          <div class="col-6">
+            <h2>Tecnologias</h2>
+              <p>Spring Boot 3</p>
+              <progress max="100" value="20" id="springProgress"></progress>
+              <p>Arduino</p>
+              <progress max="100" value="20" id="arduinoProgress"></progress>
+              <p>Bootstrap</p>
+              <progress max="100" value="40" id="bootstrapProgress"></progress>
+          </div>
+
+          <div class="col-3">
+            <h2>Soft Skills</h2>
+            <p>Empatia</p>
+            <p>Proatividade</p>
+            <p>Liderança</p>
+            <p>Introspectiva</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row text-center" id="contact">
+      <div class="row">
+        <h4 class="my-3">Contato</h4>
+        <div class="col-4">
+          <h6>Redes sociais</h6>
+          <a href="https://www.linkedin.com/in/rafael-sabatini-8a6859313">LinkedIn <i class="bi bi-linkedin"></i></a><br>
+          <a href="https://www.instagram.com/rafael_s_romera/profilecard/?igsh=MWRxejd0eGo3Zjg3bA==">Instagram <i class="bi bi-instagram"></i></a><br>
+          <a href="https://github.com/Rafael-Sabatini">Github <i class="bi bi-github"></i></a>
+        </div>
+
+        <div class="col-4">
+          <h6>Email</h6>
+          <p>rafaelsabatiniromera@gmail.com</p>
+          <a class="btn btn-outline-primary" href="mailto:rafael.sabatini@gmail.com">Enviar E-mail</a>
+        </div>
+
+        <div class="col-4">
+          <h6>Telefone</h6>
+          <a href="tel:17996740020">(17) 99674-0020</a>
+          <p>Whatsapp</p>
+        </div>
+      </div>
     </div>
   </main>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   <script src="script.js" defer></script>
+  <script src="darkMode.js"></script>
 </body>
 
 </html>

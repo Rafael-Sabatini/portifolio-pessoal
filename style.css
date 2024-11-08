@@ -2,8 +2,8 @@
 
 :root {
     /* Background */
-    --bg-gradient-1: #d8d8d8;
-    --bg-gradient-2: #b9b9b9;
+    --bg-gradient-1: #ebe8e8;
+    --bg-gradient-2: #c5c4c4;
 
     /* Text color */
     --text-color: #000000;
@@ -12,7 +12,7 @@
     --primary-color: #96cde0ce;
     --secondary-color: #7db3c5d6;
     --accent-color: #eb4545;
-    --navbar-color: #797979;
+    --navbar-color: #a1a1a1;
     --progress-gradient1: #1b5096;
     --progress-gradient2: #45a0eb;
 
@@ -23,9 +23,11 @@
     /* Shadows */
     --shadow-1: 0px 2px 4px #313131;
     --shadow-2: 0px 4px 8px #3a3a3a;
+
+    --mode-color: #2020f7;
 }
 
-.darkMode{
+.darkMode {
     /* Background */
     --bg-gradient-1: #202020;
     --bg-gradient-2: #333333;
@@ -48,21 +50,26 @@
     /* Shadows */
     --shadow-1: 0px 2px 4px #313131;
     --shadow-2: 0px 4px 8px #3a3a3a;
+
+    --mode-color: #ffff00;
 }
 
 body {
-    background: linear-gradient(to right, var(--bg-gradient-1), var(--bg-gradient-2), var(--bg-gradient-1));
+    background: linear-gradient(to bottom, var(--bg-gradient-1), var(--bg-gradient-2));
     color: var(--text-color);
     overflow-x: hidden;
+    transition: color 0.5s ease-in-out;
 }
 
-#navbar{
+#navbar {
     position: sticky;
     top: 0;
-    background-color: var(--navbar-color);
+    background: linear-gradient(to bottom, var(--navbar-color), var(--bg-gradient-2));
+    opacity: 0.9;
+    z-index: 100;
 }
 
-#navBrand{
+#navBrand {
     color: var(--text-color);
 }
 
@@ -71,85 +78,249 @@ body {
     user-select: none;
 }
 
-#homeItem{
+#homeItem {
     color: var(--text-color);
     transition: color 0.3s ease-in-out;
 }
 
-#homeItem:hover{
+#homeItem:hover {
     color: var(--link-hover);
 }
 
-#aboutItem, #projectsItem, #contactItem{
+#aboutItem,
+#projectsItem,
+#skillItem,
+#contactItem {
     color: var(--text-color);
     transition: color 0.3s ease-in-out;
     opacity: 0.8;
 }
 
-#aboutItem:hover, #projectsItem:hover, #contactItem:hover{
-    color: var(--link-hover);
+#homeItem{
+    animation: slideRight 1s ease-in-out;
 }
 
-.modal-header{
+#aboutItem{
+    animation: slideRight 1s ease-in-out;
+}
+
+#projectsItem{
+    animation: slideRight 1.2s ease-in-out;
+}
+
+#skillItem{
+    animation: slideRight 1.4s ease-in-out;
+}
+
+#contactItem{
+    animation: slideRight 1.6s ease-in-out;
+}
+
+#aboutItem:hover,
+#projectsItem:hover,
+#skillItem:hover,
+#contactItem:hover {
+    color: var(--link-hover);
+    opacity: 1;
+}
+
+#darkSwitch {
+    position: absolute;
+    right: 50px;
+    bottom: 5px;
+    display: block;
+    height: 50px;
+    width: 50px;
+    font-size: 20px;
+}
+
+#darkSwitch i {
+    color: var(--mode-color);
+}
+
+#darkSwitch i:last-child {
+    display: none;
+}
+
+.darkMode #darkSwitch i:first-child {
+    display: none;
+}
+
+.darkMode #darkSwitch i:last-child {
+    display: block;
+}
+
+.modal-header {
     background-color: var(--bg-gradient-1);
 }
 
-.modal-body{
+.modal-body {
     background: linear-gradient(to bottom, var(--bg-gradient-1), var(--bg-gradient-2));
     color: var(--text-color);
 }
 
-.modal-body input{
+.modal-body input {
     box-shadow: var(--shadow-1);
+    background-color: var(--bg-gradient-1);
+    color: var(--text-color);
 }
 
 .modal-body input:focus{
     box-shadow: var(--shadow-1);
+    color: var(--text-color);
+    background-color: var(--bg-gradient-1);
+    transform: scale(1.1);
 }
 
-.modal-footer{
+.form-floating input:focus {
+    box-shadow: var(--shadow-1);
+    color: var(--text-color);
+    background-color: var(--bg-gradient-1);
+}
+
+.modal-body input::placeholder,
+.modal-body input::after,
+.modal-body input::before{
+    color: var(--text-color);
+    background-color: var(--bg-gradient-1);
+}
+
+.modal-body label{
+    color: var(--text-color);
+}
+
+.modal-footer {
     background-color: var(--bg-gradient-2);
 }
 
+#projects img {
+    height: 200px;
+    width: 200px;
+}
 
+#projects a {
+    color: var(--text-color);
+    transition: color 0.3s ease-in-out;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.1rem;
+}
 
+#projects a:hover {
+    color: var(--link-hover);
+}
 
+ul {
+    list-style: none;
+}
 
+#contact{
+    background: linear-gradient(to bottom, var(--bg-gradient-1), var(--bg-gradient-2));
+    padding: 10px;
+}
 
+#contact a{
+    color: var(--text-color);
+    transition: color 0.3s ease-in-out;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.1rem;
+}
 
+#contact a:hover{
+    color: var(--link-hover);
+}
 
+progress,
+progress::-webkit-progress-bar{
+    background-color: var(--bg-gradient-1);
+    border-radius: 10px;
+    height: 8px;
+    width: 100%;
+}
+
+#jsProgress::-webkit-progress-value
+{
+    background: linear-gradient(to right, #ffff00, #cfcf04);
+    border-radius: 10px;
+}
+
+#htmlProgress::-webkit-progress-value{
+    background: linear-gradient(to right, #ff9900, #d47115);
+    border-radius: 10px;
+}
+
+#cssProgress::-webkit-progress-value{
+    background: linear-gradient(to right, #0084ff, #0b68a7);
+    border-radius: 10px;
+}
+
+#cshProgress::-webkit-progress-value{
+    background: linear-gradient(to right, #ff0084, #9c00ff);
+    border-radius: 10px;
+}
+
+#cProgress::-webkit-progress-value{
+    background: linear-gradient(to right, #00b7ff, #007ab3);
+    border-radius: 10px;
+}
+
+#javaProgress::-webkit-progress-value{
+    background: linear-gradient(to right, #c8ff00, #88ad03);
+    border-radius: 10px;
+}
+
+#springProgress::-webkit-progress-value{
+    background: linear-gradient(to right, #2afc00, #21b303);
+    border-radius: 10px;
+}
+
+#arduinoProgress::-webkit-progress-value{
+    background: linear-gradient(to right, #128104, #0a4e01);
+    border-radius: 10px;
+}
+
+#bootstrapProgress::-webkit-progress-value{
+    background: linear-gradient(to right, #b700ff, #65029e);
+    border-radius: 10px;
+}
 
 @keyframes popOut {
-    from{
+    from {
         transform: scale(1);
     }
-    to{
+
+    to {
         transform: scale(0);
     }
 }
 
 @keyframes popIn {
-    from{
+    from {
         transform: scale(0);
     }
-    to{
+
+    to {
         transform: scale(1);
     }
 }
 
-@keyframes slideUp {
-    from{
-        transform: translateY(400%);
+@keyframes slideRight {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
     }
-    to{
+
+    100% {
         transform: translateY(0);
+        opacity: 1;
     }
 }
 
-.popOut{
+.popOut {
     animation: popOut 0.5s ease-in-out;
 }
 
-.popIn{
+.popIn {
     animation: popIn 0.5s ease-in-out;
 }
