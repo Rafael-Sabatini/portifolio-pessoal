@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 
-<body id="home" class="darkMode">
+<body id="home">
 
   <div class="row" id="navbar">
     <nav class="navbar navbar-expand-lg mx-2">
@@ -88,10 +88,14 @@
                   <label for="contactPhone">Telefone</label>
                   <input type="tel" id="contactPhone" class="form-control" placeholder="(12) 34567-8901">
                 </div>
+                <div class="my-2">
+                  <label for="userMessage">Enviar Mensagem</label>
+                  <input type="text" id="userMessage" class="form-control" placeholder="Digite sua mensagem">
+                </div>
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Fechar</button>
-                <button type="button" class="btn btn-outline-primary">Enviar</button>
+                <button type="button" class="btn btn-outline-primary" id="submitBtn">Enviar</button>
               </div>
             </div>
           </div>
@@ -198,6 +202,7 @@
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   <script src="script.js" defer></script>
+  <script src="animations.js"></script>
   <script src="darkMode.js"></script>
 </body>
 

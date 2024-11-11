@@ -182,7 +182,7 @@ body {
 .modal-body input::after,
 .modal-body input::before{
     color: var(--text-color);
-    background-color: var(--bg-gradient-1);
+    opacity: 0.5;
 }
 
 .modal-body label{
@@ -323,4 +323,25 @@ progress::-webkit-progress-bar{
 
 .popIn {
     animation: popIn 0.5s ease-in-out;
+}
+
+.success{
+    background-color: lightgreen;
+    color: var(--text-color);
+}
+
+.error{
+    background-color: lightcoral;
+    color: var(--text-color);
+}
+
+#notif{
+    width: fit-content;
+    height: fit-content;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    padding: 10px;
+    border-radius: 10px;
 }
