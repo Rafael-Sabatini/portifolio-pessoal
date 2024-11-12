@@ -65,7 +65,6 @@ body {
     position: sticky;
     top: 0;
     background: linear-gradient(to bottom, var(--navbar-color), var(--bg-gradient-2));
-    opacity: 0.9;
     z-index: 100;
 }
 
@@ -150,6 +149,30 @@ body {
     display: block;
 }
 
+#about{
+    animation: slideFadeUp 1s ease-out;
+}
+
+#about h1{
+    animation: slideFadeUp 1.4s ease-out;
+}
+
+#about p{
+    animation: slideFadeUp 2s ease-out;
+}
+
+#projects{
+    animation: slideFadeUp 3s ease-out;
+}
+
+#projects .card{
+    animation: slideFadeUp 4s ease-out;
+}
+
+#skills{
+    animation: slideFadeUp 5s ease-out;
+}
+
 .modal-header {
     background-color: var(--bg-gradient-1);
 }
@@ -195,7 +218,7 @@ body {
 
 #projects img {
     height: 200px;
-    width: 200px;
+    width: 4000px;
 }
 
 #projects a {
@@ -208,6 +231,23 @@ body {
 
 #projects a:hover {
     color: var(--link-hover);
+}
+
+.card{
+    border-radius: 10px;
+    box-shadow: var(--shadow-1);
+    transition: transform 0.3s ease-in-out;
+    overflow: hidden;
+    background: linear-gradient(to bottom, var(--bg-gradient-1), var(--bg-gradient-2));
+    color: var(--text-color);
+}
+
+.card:hover{
+    transform: scale(1.05);
+}
+
+.card a:hover{
+    color: var(--text-color);
 }
 
 ul {
@@ -317,6 +357,20 @@ progress::-webkit-progress-bar{
     }
 }
 
+@keyframes slideFadeUp {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    50%{
+        opacity: 0.5;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
 .popOut {
     animation: popOut 0.5s ease-in-out;
 }
@@ -326,12 +380,12 @@ progress::-webkit-progress-bar{
 }
 
 .success{
-    background-color: lightgreen;
+    background-color: #37f337;
     color: var(--text-color);
 }
 
 .error{
-    background-color: lightcoral;
+    background-color: #ec2c2c;
     color: var(--text-color);
 }
 
@@ -344,4 +398,8 @@ progress::-webkit-progress-bar{
     z-index: 1000;
     padding: 10px;
     border-radius: 10px;
+}
+
+.modal, .fade, .show{
+    display: none;
 }

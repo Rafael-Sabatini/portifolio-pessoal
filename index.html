@@ -55,7 +55,7 @@
       <img src="/img/Me.jpg" class="img-fluid rounded-circle" style="height: 300px; width: 300px;">
       <h2>Rafael Sabatini Romera</h2>
       <p style="font-weight: lighter;">Desenvolvedor Full-Stack</p>
-      <aside class="container my-3" id="aboutContainer">
+      <aside class="container my-3">
         <h1>Quem sou Eu?</h1>
         <p>
           <strong>Eu sou Rafael, estudante de Engenharia da Computação na UNiRP.</strong>
@@ -76,7 +76,7 @@
           <div class="modal-dialog">
             <div class="modal-content">
               <div class="modal-header">
-                <h1 class="modal-title fs-5" id="contactModalLabel">Deixe suas informações</h1>
+                <h2 class="modal-title fs-5" id="contactModalLabel">Deixe suas informações</h2>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
               <div class="modal-body text-start">
@@ -106,33 +106,31 @@
     <div class="container-fluid col-8" id="projects">
       <h1>Projetos</h1>
       <hr>
-      <article>
-        <div class="row">
-          <div class="col-4">
-            <a href="https://aetheriv.github.io/Converte-Textos/">Conversor de Textos</a>
-            <p>
-              Um projeto feito para auxiliar o Suporte Técnico da Soften Sistemas em algumas tarefas, como remoção de
-              símbolos e quebra de linhas
-            </p>
-            <img src="/img/conversorTexto.jpg" alt="conversorTexto" class="img-fluid rounded">
-          </div>
-          <div class="col-4">
-            <a href="https://aetheriv.github.io/Chamado-Express-V3/">Chamado Express</a>
-            <p>
-              Esse projeto foi desenvolvido para auxilia os técnicos da Soften Sistemas a preencher chamados, organizando as informações
-              de uma maneira fácil
-            </p>
-            <img src="/img/chamadoExpress.jpg" alt="chamadoExpress" class="img-fluid rounded">
-          </div>
-          <div class="col-4">
-            <a href="https://aetheriv.github.io/pokedex/">Pokedex com Imagens</a>
-            <p>
-              Esse foi um projeto pessoal e para estudos de API, é uma pokedex que consulta um pokemon e apresenta uma imagem ao consultar
-            </p>
-            <img src="/img/pokedex.jpg" alt="pokedex" class="img-fluid rounded">
+      <article id="projects" class="row">
+        <div class="col-3 card mx-auto d-block" style="width: 18rem;">
+          <img src="/img/chamadoExpress.jpg" alt="chamadoExpress" class="img-fluid mt-2">
+          <div class="card-body">
+            <a class="btn btn-primary my-2" href="https://rafael-sabatini.github.io/Chamado-Express-V3/">Visitar</a>
+            <p>Projeto para preenchimentos de chamados de forma rápida e detalhada</p>
           </div>
         </div>
-      </article>
+
+        <div class="col-3 card mx-auto d-block" style="width: 18rem;">
+          <img src="/img/conversorTexto.jpg" alt="conversorTexto" class="img-fluid mt-2">
+          <div class="card-body">
+            <a class="btn btn-primary my-2" href="https://rafael-sabatini.github.io/Converte-Textos/">Visitar</a>
+            <p>Projeto para conversão de strings, formatação de SQL e contador de caracteres</p>
+          </div>
+        </div>
+        
+        <div class="col-3 card mx-auto d-block" style="width: 18rem;">
+          <img src="/img/pokedex.jpg" alt="pokedex" class="img-fluid mt-2">
+          <div class="card-body">
+            <a class="btn btn-primary my-2" href="https://rafael-sabatini.github.io/pokedex/">Visitar</a>
+            <p>Pokedex com consulta de API e imagens</p>
+          </div>
+        </div>
+    </article>
 
       <div class="row" id="skills">
         <h1>Habilidades</h1>
