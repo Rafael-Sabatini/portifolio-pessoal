@@ -25,7 +25,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 body: JSON.stringify(formData),
             });
             const result = await response.json();
-            createNotif("Dados enviados, aguarde o retorno!", "success");
+            console.log(result);
+            createNotif("Dados enviados, entrarei em contato em breve!", "success");
         } catch (error) {
             console.error('Error sending contact message:', error);
             createNotif("Ocorreu um erro ao enviar a mensagem. Tente novamente mais tarde.", "error");
@@ -63,6 +64,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // Send the contact data to the server
         await sendContactMessage(contactData);
+
+        // Reset form fields
+        contactEmail.value = "";
+        contactPhone.value = "";
+        userMessage.value = "";
     });
 
     // Notification function
