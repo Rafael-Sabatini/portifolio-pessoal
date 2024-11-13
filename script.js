@@ -4,19 +4,29 @@ document.addEventListener("DOMContentLoaded", () => {
     const userMessage = document.getElementById("userMessage");
     const submitBtn = document.getElementById("submitBtn");
 
-    // Function to validate email
     function validateEmail(email) {
         const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         return regex.test(email);
     }
 
-    // Function to validate phone number
     function validatePhone(phone) {
         const regex = /\([0-9]+\) [0-9]+-[0-9]+/;
         return regex.test(phone);
     }
 
-    // Function to send contact message to server
+    function formatPhoneNumber(phone) {
+        const digits = phone.replace(/\D/g, '');
+
+        if (digits.length === 10) {
+            return `(${digits.slice(0, 2)}) ${digits.slice(2, 6)}-${digits.slice(6, 10)}`;
+        } else if (digits.length === 11) {
+
+            return `(${digits.slice(0, 2)}) ${digits.slice(2, 7)}-${digits.slice(7, 11)}`;
+        }
+
+        return phone;
+    }
+
     const sendContactMessage = async (formData) => {
         try {
             const response = await fetch('http://localhost:3000/contact', {
@@ -26,6 +36,14 @@ document.addEventListener("DOMContentLoaded", () => {
             });
             const result = await response.json();
             console.log(result);
+
+            const emailValue = contactEmail.value;
+            const phoneValue = contactPhone.value;
+            const messageValue = userMessage.value;
+
+            contactEmail.value = "";
+            contactPhone.value = "";
+            userMessage.value = "";
             createNotif("Dados enviados, entrarei em contato em breve!", "success");
         } catch (error) {
             console.error('Error sending contact message:', error);
@@ -41,37 +59,33 @@ document.addEventListener("DOMContentLoaded", () => {
         const phoneValue = contactPhone.value;
         const messageValue = userMessage.value;
 
-        // Validate email
         if (!validateEmail(emailValue)) {
             createNotif("Digite um e-mail válido", "error");
             contactEmail.focus();
             return;
         }
 
-        // Validate phone number
         if (!validatePhone(phoneValue)) {
-            createNotif("Digite um número de telefone válido", "error");
-            contactPhone.focus();
-            return;
+            const formattedPhone = formatPhoneNumber(phoneValue);
+            
+            if (validatePhone(formattedPhone)) {
+                contactPhone.value = formattedPhone;
+            } else {
+                createNotif("Digite um número de telefone válido", "error");
+                contactPhone.focus();
+                return;
+            }
         }
 
-        // Prepare form data to send
         const contactData = {
             email: emailValue,
             phone: phoneValue,
             message: messageValue
         };
 
-        // Send the contact data to the server
         await sendContactMessage(contactData);
-
-        // Reset form fields
-        contactEmail.value = "";
-        contactPhone.value = "";
-        userMessage.value = "";
     });
 
-    // Notification function
     function createNotif(message, type) {
         const notification = document.createElement("span");
         notification.id = "notif";
