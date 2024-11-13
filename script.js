@@ -69,7 +69,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const formattedPhone = formatPhoneNumber(phoneValue);
             
             if (validatePhone(formattedPhone)) {
-                contactPhone.value = formattedPhone;
+                phoneValue = formattedPhone;
             } else {
                 createNotif("Digite um número de telefone válido", "error");
                 contactPhone.focus();
